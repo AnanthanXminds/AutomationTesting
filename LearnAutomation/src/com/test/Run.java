@@ -32,24 +32,20 @@ public class Run {
 		Integer perc = (int) (Math.floor((mark/totalMarks)*100));
 		System.out.println("Percentage : "+perc);
 		switch(perc/10) {
-		case 8,9,10 : System.out.println("You have achieved A+ grade");
-		break;
-		case 7 : System.out.println("You have achieved A grade");
-		break;
-		case 6 : System.out.println("You have achieved B+ grade");
-		break;
-		case 5 : System.out.println("You have achieved B grade");
-		break;
-		case 4 : System.out.println("You have achieved C grade");
-		break;
-		case 3,2,1,0 : System.out.println("You have D grade : FAILED");
-		break;
+		case 8,9,10 -> System.out.println("You have achieved A+ grade");
+		case 7 -> System.out.println("You have achieved A grade");
+		case 6 -> System.out.println("You have achieved B+ grade");
+		case 5 -> System.out.println("You have achieved B grade");
+		case 4 -> System.out.println("You have achieved C grade");
+		case 3,2,1,0 -> System.out.println("You have D grade : FAILED");
 		}
 		
 	}
 	
 
 	public static void main (String args[]) {
+		StatusCodeExplanation statusCodeExplanation = new StatusCodeExplanation();
+		statusCodeExplanation.giveStatusExplanation();
 		Scanner sc = new Scanner(System.in);
 		Run r1 =new Run();
 		System.out.println("Enter your Mark");

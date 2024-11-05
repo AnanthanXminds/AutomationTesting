@@ -1,8 +1,2 @@
-/**
- * 
- */
-/**
- * 
- */
-module LearnAutomation {
+module Testing {
 }
