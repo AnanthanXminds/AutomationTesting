@@ -44,6 +44,10 @@ public class Run {
 	
 
 	public static void main (String args[]) {
+		DuplicateWord duplicateWord = new DuplicateWord();
+		duplicateWord.findDuplicate();
+		Calculator calculator = new Calculator();
+		calculator.calculate();
 		StatusCodeExplanation statusCodeExplanation = new StatusCodeExplanation();
 		statusCodeExplanation.giveStatusExplanation();
 		Scanner sc = new Scanner(System.in);

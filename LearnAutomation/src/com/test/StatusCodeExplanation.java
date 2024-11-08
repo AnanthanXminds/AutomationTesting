@@ -17,8 +17,8 @@ public class StatusCodeExplanation {
         System.out.println("Do you want to continue checking the status code explanation. " +
                 "Type Yes or No");
         String choice = sc.next();
-        switch (choice){
-            case "yes","Yes","YES" -> giveStatusExplanation();
+        while(choice.equalsIgnoreCase("yes")){
+            giveStatusExplanation();
         }
         sc.close();
     }
