@@ -41,9 +41,18 @@ public class Run {
 		}
 		
 	}
+	public void findErrorMessage(){
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Give the error code");
+		Integer code = sc.nextInt();
+		String message = HttpErrorCodes.getErrorMessage(String.valueOf(code));
+		System.out.println(message);
+	}
 	
 
 	public static void main (String args[]) {
+		Run r = new Run();
+		r.findErrorMessage();
 		DuplicateWord duplicateWord = new DuplicateWord();
 		duplicateWord.findDuplicate();
 		Calculator calculator = new Calculator();

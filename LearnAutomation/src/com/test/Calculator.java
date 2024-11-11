@@ -13,25 +13,21 @@ public class Calculator {
         Integer firstNumber = sc.nextInt();
         System.out.println("Enter your second number");
         Integer secondNumber = sc.nextInt();
-        int output;
-        switch (operator){
+        int output = switch (operator){
             case "+" -> {
-                output = firstNumber+secondNumber;
-                System.out.println("Answer : " + output);
+                yield firstNumber+secondNumber;
             }
             case "-" -> {
-                output = firstNumber-secondNumber;
-                System.out.println("Answer : " + output);
+                yield firstNumber-secondNumber;
             }
             case "/" -> {
-                output = firstNumber/secondNumber;
-                System.out.println("Answer : " + output);
+                yield firstNumber/secondNumber;
             }
             case "*" -> {
-                output = firstNumber*secondNumber;
-                System.out.println("Answer : " + output);
+                yield  firstNumber*secondNumber;
             }
-            default -> System.out.println("Give a valid expression");
-        }
+            default -> throw new IllegalStateException("Unexpected value: " + operator);
+        };
+        System.out.println("Answer : " + output);
     }
 }
