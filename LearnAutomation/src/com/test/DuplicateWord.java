@@ -21,10 +21,10 @@ public class DuplicateWord {
                 }
             }
         }
-        System.out.println("Repeating word are : ");
-        duplicateWords.forEach(System.out::println);
-
-
+        if (!duplicateWords.isEmpty()){
+            System.out.println("Repeating word are : ");
+            duplicateWords.forEach(System.out::println);
+        }
     }
     public static void main(String args []){
         DuplicateWord duplicateWord = new DuplicateWord();
